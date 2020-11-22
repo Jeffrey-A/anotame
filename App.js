@@ -1,21 +1,62 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import React, { useState } from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  FlatList,
+  SafeAreaView,
+} from "react-native";
+import ContactsWrapper from "react-native-contacts-wrapper";
+import ListItem from "./components/ListItem";
 
-export default function App() {
+export default function App(props) {
+  const [items, setItem] = useState([
+    {
+      name: "John Due 1",
+      date: "02/27/2020",
+      time: "10:00 pm",
+    },
+    {
+      name: "John Due 2",
+      date: "02/27/2020",
+      time: "10:00 pm",
+    },
+    {
+      name: "John Due 3",
+      date: "02/27/2020",
+      time: "10:00 pm",
+    },
+  ]);
   return (
-    <View style={styles.container}>
-      <Text>Anotate</Text>
-      <StatusBar style="auto" />
+    <View style={styles.mainWrapper}>
+      <View style={styles.header}>
+        <Text style={styles.logo}>Anotate</Text>
+        <Button title="Add" />
+      </View>
+
+      <FlatList
+        data={items}
+        renderItem={({ item }) => <ListItem item={item} />}
+      />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  mainWrapper: {
+    padding: 10,
+    paddingTop: 20,
+  },
+  header: {
+    backgroundColor: "#fff",
+    justifyContent: "space-between",
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  logo: {
+    fontSize: 25,
+    fontWeight: 'bold',
   },
 });
