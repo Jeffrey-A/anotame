@@ -4516,6 +4516,16 @@ react-is@^16.12.0, react-is@^16.8.1, react-is@^16.8.4:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-native-contacts-wrapper@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/react-native-contacts-wrapper/-/react-native-contacts-wrapper-0.2.4.tgz#7513eac1e2093239348e44b71ac29d62f81f1da0"
+  integrity sha1-dRPqweIJMjk0jkS3GsKdYvgfHaA=
+
+react-native-contacts@^6.0.3:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/react-native-contacts/-/react-native-contacts-6.0.3.tgz#74066c53db88d865d4630d1539a6e8ca50607a93"
+  integrity sha512-JoiYBrJ2/sAgzhytwaa7ephmqXkxO0o2vk4eNyOb74WjZNIEiBdZdjxjB62Lt4zMDT/28NwRk82d5m5x92m3Kg==
+
 react-native-safe-area-context@3.1.4:
   version "3.1.4"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-3.1.4.tgz#9b7f883a5ae8da6218d17467a350434005893602"
