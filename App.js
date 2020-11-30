@@ -1,4 +1,6 @@
+import { PermissionsAndroid } from 'react-native';
 import { StatusBar } from "expo-status-bar";
+import * as Contacts from 'expo-contacts';
 import React, { useState } from "react";
 import {
   StyleSheet,
@@ -37,6 +39,22 @@ export default class App extends React.Component {
     this.state = {
       items: items,
     }
+  }
+
+  componentDidMount() {
+    (async () => {
+      const { status } = await Contacts.requestPermissionsAsync();
+      if (status === 'granted') {
+        const { data } = await Contacts.getContactsAsync({
+          fields: [Contacts.Fields.EMAILS],
+        }
+        );
+
+        if (data.length > 0) {
+          this.setState({ items: data });
+        }
+      }
+    })();
   }
 
   add() {
